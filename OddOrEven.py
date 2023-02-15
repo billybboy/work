@@ -1,12 +1,11 @@
-import random
-
-def number(num):
-    if num % 2 == 0:
-        print("this number is an even.")
+try:
+    num = int(input("please enter a number between 1-1000 : "))
+    if num < 1 or num > 1000:
+         print("this number is out of range")
     else:
-        print("this number is an odd.")
-
-num = random.randint(0, 1000)
-
-print(num)
-number(num)
+        if num % 2 == 0:
+            print("this number is an even.")
+        else:
+            print("this number is an odd.")
+except ValueError:
+    print("this number is out of range")
